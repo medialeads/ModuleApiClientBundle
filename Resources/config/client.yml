@@ -1,0 +1,6 @@
+services:
+    module_api_client.client.abstract_client:
+        class: Module\ApiClientBundle\Client\AbstractClient
+        abstract: true
+        calls:
+            - [setApiHelper, ["@module_api_client.helper.api"]]

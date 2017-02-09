@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_slider.client:
+        class: Module\ApiClientBundle\ModuleSlider\ModuleSliderClient
+        parent: module_api_client.client.abstract_client

@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_page.client:
+        class: Module\ApiClientBundle\ModulePage\ModulePageClient
+        parent: module_api_client.client.abstract_client

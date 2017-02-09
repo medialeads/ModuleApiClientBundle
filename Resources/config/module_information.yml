@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_information.client:
+        class: Module\ApiClientBundle\ModuleInformation\ModuleInformationClient
+        parent: module_api_client.client.abstract_client

@@ -1,0 +1,9 @@
+services:
+    module_api_client.module_contact.client:
+        class: Module\ApiClientBundle\ModuleContact\ModuleContactClient
+        parent: module_api_client.client.abstract_client
+
+    module_api_client.module_contact.helper:
+        class: Module\ApiClientBundle\ModuleContact\ModuleContactHelper
+        arguments:
+            - "@module_api_common.module_contact.helper"

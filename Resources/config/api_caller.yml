@@ -1,0 +1,6 @@
+services:
+    module_api_client.api_caller:
+        class: "%api_caller.class%"
+        arguments:
+            - "%api_caller.options%"
+            - "@api_call_logger"

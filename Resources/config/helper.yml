@@ -1,0 +1,5 @@
+services:
+    module_api_client.helper.api:
+        class: Module\ApiClientBundle\Helper\ApiHelper
+        arguments:
+            - "@module_api_client.api_caller"

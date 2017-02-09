@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_menu.client:
+        class: Module\ApiClientBundle\ModuleMenu\ModuleMenuClient
+        parent: module_api_client.client.abstract_client
