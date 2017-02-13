@@ -75,23 +75,24 @@ class Information
     private $cookiesPageContent;
 
     /**
-     * @param int $id
-     * @param string $faviconUrl
-     * @param string $logoUrl
-     * @param string $ogImageUrl
-     * @param string $title
-     * @param string $description
-     * @param string $keywords
-     * @param string $footerContent
-     * @param string $emailsSenderName
-     * @param string $emailsSignatureContent
-     * @param string $tos
-     * @param string $cookiesHeadbandText
-     * @param string $cookiesLinkText
-     * @param string $cookiesPageContent
+     * @param int|null $id
+     * @param string|null $faviconUrl
+     * @param string|null $logoUrl
+     * @param string|null $ogImageUrl
+     * @param string|null $title
+     * @param string|null $description
+     * @param string|null $keywords
+     * @param string|null $footerContent
+     * @param string|null $emailsSenderName
+     * @param string|null $emailsSignatureContent
+     * @param string|null $tos
+     * @param string|null $cookiesHeadbandText
+     * @param string|null $cookiesLinkText
+     * @param string|null $cookiesPageContent
      */
-    public function __construct($id, $faviconUrl, $logoUrl, $ogImageUrl, $title, $description, $keywords, $footerContent,
-        $emailsSenderName, $emailsSignatureContent, $tos, $cookiesHeadbandText, $cookiesLinkText, $cookiesPageContent)
+    public function __construct($id = null, $faviconUrl = null, $logoUrl = null, $ogImageUrl = null, $title = null,
+        $description = null, $keywords = null, $footerContent = null, $emailsSenderName = null, $emailsSignatureContent = null,
+        $tos = null, $cookiesHeadbandText = null, $cookiesLinkText = null, $cookiesPageContent = null)
     {
         $this->id = $id;
         $this->faviconUrl = $faviconUrl;
