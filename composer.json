@@ -8,9 +8,7 @@
     }
   },
   "require": {
-    "php": ">=5.6",
-    "symfony/symfony": ">=3.2",
-    "leaseweb/api-caller-bundle": "*",
-    "module/api-common-bundle": "dev-master"
+    "module/api-common-bundle": "dev-master",
+    "leaseweb/api-caller-bundle": "*"
   }
 }
