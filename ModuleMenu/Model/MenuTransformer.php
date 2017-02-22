@@ -1,9 +1,6 @@
 <?php
 
-namespace Module\ApiCommonBundle\ModuleMenu\Model;
-
-use Module\ApiClientBundle\ModuleMenu\Model\Menu;
-use Module\ApiClientBundle\ModuleMenu\Model\MenuElement;
+namespace Module\ApiClientBundle\ModuleMenu\Model;
 
 class MenuTransformer
 {

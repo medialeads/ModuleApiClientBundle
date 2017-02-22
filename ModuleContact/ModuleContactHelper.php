@@ -35,8 +35,29 @@ class ModuleContactHelper
      */
     public function getLoginRequest($username, $plainPassword)
     {
-        list($encryptedPassword, $iv) = $this->apiCommonModuleContactHelper->getEncryptedPasswordAndIv($plainPassword, $this->encryptionKey);
+        list($encryptedPassword, $iv) = $this->getEncryptedPasswordAndIv($plainPassword);
 
         return new Login($username, $encryptedPassword, $iv);
+    }
+
+    /**
+     * @param string $plainPassword
+     *
+     * @return array
+     */
+    public function getEncryptedPasswordAndIv($plainPassword)
+    {
+        return $this->apiCommonModuleContactHelper->getEncryptedPasswordAndIv($plainPassword, $this->encryptionKey);
+    }
+
+    /**
+     * @param string $encryptedPassword
+     * @param string $iv
+     *
+     * @return string
+     */
+    public function getDecryptedPassword($encryptedPassword, $iv)
+    {
+        return $this->apiCommonModuleContactHelper->getDecryptedPassword($encryptedPassword, $iv, $this->encryptionKey);
     }
 }

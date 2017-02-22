@@ -9,6 +9,7 @@
   },
   "require": {
     "module/api-common-bundle": "dev-master",
-    "leaseweb/api-caller-bundle": "*"
+    "leaseweb/api-caller-bundle": "*",
+    "misd/phone-number-bundle": "^1.2"
   }
 }

@@ -1,8 +1,6 @@
 <?php
 
-namespace Module\ApiCommonBundle\ModulePage\Model;
-
-use Module\ApiClientBundle\ModulePage\Model\Page;
+namespace Module\ApiClientBundle\ModulePage\Model;
 
 class PageTransformer
 {

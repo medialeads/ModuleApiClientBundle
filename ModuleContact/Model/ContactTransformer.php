@@ -1,6 +1,6 @@
 <?php
 
-namespace Module\ApiCommonBundle\ModuleContact\Model;
+namespace Module\ApiClientBundle\ModuleContact\Model;
 
 use libphonenumber\PhoneNumber;
 

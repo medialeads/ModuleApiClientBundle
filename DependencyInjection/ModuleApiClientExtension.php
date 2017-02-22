@@ -17,7 +17,8 @@ class ModuleApiClientExtension extends Extension
     {
         $requiredBundles = array(
             'LswApiCallerBundle',
-            'ModuleApiCommonBundle'
+            'ModuleApiCommonBundle',
+            'MisdPhoneNumberBundle'
         );
         $bundles = $container->getParameter('kernel.bundles');
         foreach ($requiredBundles as $requiredBundle) {

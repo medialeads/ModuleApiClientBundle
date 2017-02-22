@@ -1,8 +1,6 @@
 <?php
 
-namespace Module\ApiCommonBundle\ModuleSlider\Model;
-
-use Module\ApiClientBundle\ModuleSlider\Model\Slider;
+namespace Module\ApiClientBundle\ModuleSlider\Model;
 
 class SliderTransformer
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Module\ApiCommonBundle\ModuleInformation\Model;
+namespace Module\ApiClientBundle\ModuleInformation\Model;
 
 use Module\ApiClientBundle\ModuleInformation\Model\Information;
 

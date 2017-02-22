@@ -145,8 +145,8 @@ class ApiHelper
      */
     public function call(ApiCallInterface $call)
     {
-        $response = $this->apiCaller->call($call);
+        $data = $this->apiCaller->call($call);
 
-        return new Response(intval($this->apiCaller->getLastStatus()), $response);
+        return new Response(intval($this->apiCaller->getLastStatus()), $data);
     }
 }
