@@ -20,7 +20,7 @@ class InformationTransformer
 
         $logoUrl = null;
         if (isset($array['_logo_path_url'])) {
-            $faviconUrl = $array['_logo_path_url'];
+            $logoUrl = $array['_logo_path_url'];
         }
 
         $ogImageUrl = null;
