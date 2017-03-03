@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_quote_history.client:
+        class: Module\ApiClientBundle\ModuleQuoteHistory\ModuleQuoteHistoryClient
+        parent: module_api_client.client.abstract_client

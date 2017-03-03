@@ -46,7 +46,7 @@ class ModuleContactClient extends AbstractClient
             throw new \InvalidArgumentException();
         }
 
-        return $this->apiHelper->post(sprintf('/api/module-contact/create/%s', $format), CreateTransformer::toParameters($create));
+        return $this->apiHelper->post(sprintf('/api/module-contact/create/%s', $format), $format, CreateTransformer::toParameters($create));
     }
 
     /**
@@ -65,6 +65,6 @@ class ModuleContactClient extends AbstractClient
             throw new \InvalidArgumentException();
         }
 
-        return $this->apiHelper->post(sprintf('/api/module-contact/%s/edit/%s', $id, $format), EditTransformer::toParameters($edit));
+        return $this->apiHelper->post(sprintf('/api/module-contact/edit/%s/%s', $id, $format), $format, EditTransformer::toParameters($edit));
     }
 }

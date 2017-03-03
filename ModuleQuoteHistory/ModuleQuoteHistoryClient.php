@@ -1,21 +1,29 @@
 <?php
 
-namespace AppBundle\Api\Helper;
+namespace Module\ApiClientBundle\ModuleQuoteHistory;
 
-class QuoteHistoryHelper
+use Module\ApiClientBundle\Client\AbstractClient;
+use Module\ApiClientBundle\Model\Response;
+use Module\ApiCommonBundle\ModuleQuoteHistory\Request\Create;
+use Module\ApiCommonBundle\ModuleQuoteHistory\Request\CreateTransformer;
+
+class ModuleQuoteHistoryClient extends AbstractClient
 {
     /**
-     * @var ApiHelper
+     * @param Create $create
+     * @param string $format
+     *
+     * @return Response
      */
-    private $apiHelper;
-
-    /**
-     * @param ApiHelper $apiHelper
-     */
-    public function __construct(ApiHelper $apiHelper)
+    public function create(Create $create, $format = 'json')
     {
-        $this->apiHelper = $apiHelper;
-    }
+        if (!in_array($format, array(
+            'json',
+            'xml'
+        ))) {
+            throw new \InvalidArgumentException();
+        }
 
-    public function push(Q)
+        return $this->apiHelper->post(sprintf('/api/module-quote-history/create/%s', $format), $format, CreateTransformer::toParameters($create));
+    }
 }
