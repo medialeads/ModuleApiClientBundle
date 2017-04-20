@@ -2,8 +2,6 @@
 
 namespace Module\ApiClientBundle\ModuleInformation\Model;
 
-use Module\ApiClientBundle\ModuleInformation\Model\Information;
-
 class InformationTransformer
 {
     /**
@@ -29,8 +27,7 @@ class InformationTransformer
         }
 
         return new Information($array['id'], $faviconUrl, $logoUrl, $ogImageUrl, $array['title'], $array['description'],
-            $array['keywords'], $array['footer_content'], $array['emails_sender_name'],
-            $array['emails_signature_content'], $array['tos'], $array['cookies_headband_text'],
-            $array['cookies_link_text'], $array['cookies_page_content']);
+            $array['keywords'], $array['emails_sender_name'], $array['emails_signature_content'], $array['tos'],
+            $array['cookies_headband_text'], $array['cookies_link_text'], $array['cookies_page_content'], $array['code']);
     }
 }

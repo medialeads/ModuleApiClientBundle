@@ -42,11 +42,6 @@ class Information
     /**
      * @var string
      */
-    private $footerContent;
-
-    /**
-     * @var string
-     */
     private $emailsSenderName;
 
     /**
@@ -75,6 +70,11 @@ class Information
     private $cookiesPageContent;
 
     /**
+     * @var string
+     */
+    private $code;
+
+    /**
      * @param int|null $id
      * @param string|null $faviconUrl
      * @param string|null $logoUrl
@@ -82,17 +82,17 @@ class Information
      * @param string|null $title
      * @param string|null $description
      * @param string|null $keywords
-     * @param string|null $footerContent
      * @param string|null $emailsSenderName
      * @param string|null $emailsSignatureContent
      * @param string|null $tos
      * @param string|null $cookiesHeadbandText
      * @param string|null $cookiesLinkText
      * @param string|null $cookiesPageContent
+     * @param string|null $code
      */
     public function __construct($id = null, $faviconUrl = null, $logoUrl = null, $ogImageUrl = null, $title = null,
-        $description = null, $keywords = null, $footerContent = null, $emailsSenderName = null, $emailsSignatureContent = null,
-        $tos = null, $cookiesHeadbandText = null, $cookiesLinkText = null, $cookiesPageContent = null)
+        $description = null, $keywords = null, $emailsSenderName = null, $emailsSignatureContent = null, $tos = null,
+        $cookiesHeadbandText = null, $cookiesLinkText = null, $cookiesPageContent = null, $code = null)
     {
         $this->id = $id;
         $this->faviconUrl = $faviconUrl;
@@ -101,13 +101,13 @@ class Information
         $this->title = $title;
         $this->description = $description;
         $this->keywords = $keywords;
-        $this->footerContent = $footerContent;
         $this->emailsSenderName = $emailsSenderName;
         $this->emailsSignatureContent = $emailsSignatureContent;
         $this->tos = $tos;
         $this->cookiesHeadbandText = $cookiesHeadbandText;
         $this->cookiesLinkText = $cookiesLinkText;
         $this->cookiesPageContent = $cookiesPageContent;
+        $this->code = $code;
     }
 
     /**
@@ -169,14 +169,6 @@ class Information
     /**
      * @return string
      */
-    public function getFooterContent()
-    {
-        return $this->footerContent;
-    }
-
-    /**
-     * @return string
-     */
     public function getEmailsSenderName()
     {
         return $this->emailsSenderName;
@@ -220,5 +212,13 @@ class Information
     public function getCookiesPageContent()
     {
         return $this->cookiesPageContent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->code;
     }
 }
