@@ -1,0 +1,4 @@
+services:
+    module_api_client.module_news.client:
+        class: Module\ApiClientBundle\ModuleNews\ModuleNewsClient
+        parent: module_api_client.client.abstract_client

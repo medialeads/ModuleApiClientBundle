@@ -34,6 +34,7 @@ class ModuleApiClientExtension extends Extension
         $loader->load('module_contact.yml');
         $loader->load('module_information.yml');
         $loader->load('module_menu.yml');
+        $loader->load('module_news.yml');
         $loader->load('module_page.yml');
         $loader->load('module_quote_history.yml');
         $loader->load('module_slider.yml');

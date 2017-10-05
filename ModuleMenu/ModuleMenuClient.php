@@ -26,6 +26,6 @@ class ModuleMenuClient extends AbstractClient
             throw new \InvalidArgumentException();
         }
 
-        return $this->apiHelper->get(sprintf('/api/module-menu/%s/%s', $routeKey, $format), $format,  GetTransformer::toParameters($get));
+        return $this->apiHelper->get(sprintf('/api/module-menu/%s/%s', $routeKey, $format), $format, GetTransformer::toParameters($get));
     }
 }
