@@ -11,7 +11,7 @@ class NewsTransformer
      */
     public static function fromArray(array $array)
     {
-        return new News($array['id'], $array['title'], $array['content'], $array['_image_path_url'], new \DateTime($array['starting_display_date']), $array['slug']);
+        return new News($array['id'], $array['title'], $array['content'], $array['_image_path_url'], new \DateTime($array['starting_display_date']), $array['slug'], $array['meta_title'], $array['meta_description'], $array['summary']);
     }
 
     /**

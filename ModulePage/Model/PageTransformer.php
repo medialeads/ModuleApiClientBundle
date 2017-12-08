@@ -11,6 +11,6 @@ class PageTransformer
      */
     public static function fromArray(array $array)
     {
-        return new Page($array['id'], $array['title'], $array['content']);
+        return new Page($array['id'], $array['title'], $array['content'], $array['meta_title'], $array['meta_description']);
     }
 }

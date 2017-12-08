@@ -35,6 +35,21 @@ class News
     private $slug;
 
     /**
+     * @var string
+     */
+    private $metaTitle;
+
+    /**
+     * @var string
+     */
+    private $metaDescription;
+
+    /**
+     * @var string
+     */
+    private $summary;
+
+    /**
      * @param int $id
      * @param string $title
      * @param string $content
@@ -42,7 +57,7 @@ class News
      * @param \DateTime $startingDisplayDate
      * @param string $slug
      */
-    public function __construct($id, $title, $content, $imageUrl, \DateTime $startingDisplayDate, $slug)
+    public function __construct($id, $title, $content, $imageUrl, \DateTime $startingDisplayDate, $slug, $metaTitle, $metaDescription, $summary)
     {
         $this->id = $id;
         $this->title = $title;
@@ -50,6 +65,9 @@ class News
         $this->imageUrl = $imageUrl;
         $this->startingDisplayDate = $startingDisplayDate;
         $this->slug = $slug;
+        $this->metaTitle = $metaTitle;
+        $this->metaDescription = $metaDescription;
+        $this->summary = $summary;
     }
 
     /**
@@ -98,5 +116,32 @@ class News
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getMetaTitle()
+    {
+        return $this->metaTitle;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getMetaDescription()
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getSummary()
+    {
+        return $this->summary;
     }
 }
