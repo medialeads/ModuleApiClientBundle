@@ -27,7 +27,7 @@ class ModulePageClient extends AbstractClient
             throw new \InvalidArgumentException();
         }
 
-        return $this->apiHelper->get(sprintf('/api/module-page/%s/%s', $slug, $format), $format, GetTransformer::toParameters($get));
+        return $this->apiHelper->get(sprintf('/api/module-page/get/%s/%s', $slug, $format), $format, GetTransformer::toParameters($get));
     }
 
     /**
